@@ -115,7 +115,7 @@ $(document).ready(() => {
         })
             .append('<div id="inputNodeTitle" class="contextMenuItem"><input type="text" value="' + link.title + '"></input><select></select><button id="changeNodeOk">ok</button></div>')
             .append('<div id="closeContextMenu" class="contextMenuItem">Close Menu</div>');
-        $('#inputNodeTitle').on('change', (event) => {
+        $('#inputNodeTitle input').on('change', (event) => {
             fillSelectWithSearchNodes(event.target.value, $('#contextMenu select'));
         });
         $("#changeNodeOk").on('click', () => {
@@ -252,7 +252,7 @@ $(document).ready(() => {
                     log(response);
                     if (response.hash) {
                         locationHistory.push($('#main img').data('hash'));
-                        $('#main img').data('hash', response.hash).attr('src', response.img);
+                        $('#main img').data({hash: response.hash, title: response.title, id: response.id}).attr('src', response.img);
                         refreshMain();
                     }
                 },
