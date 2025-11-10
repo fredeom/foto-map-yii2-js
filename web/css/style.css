@@ -1,0 +1,35 @@
+#main {
+    position: relative;
+}
+
+.contextMenuItem {
+    background: #f0f0f0;
+    cursor: pointer;
+    user-select: none;
+    padding: 0.5rem;
+    border: 1px dashed #a0b0c0;
+}
+
+.contextMenuItem:hover {
+    color: red;
+    border: 2px dashed #405060;
+}
+
+#main .link {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #fee;
+    background: blue;
+    color: white;
+}
+
+#changeTitleOk {
+    background: green;
+    color: white;
+}
+
+#changeNodeOk {
+    background: green;
+    color: white;
+}
